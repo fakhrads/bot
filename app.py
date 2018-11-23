@@ -33,14 +33,14 @@ from linebot.models import (
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('K2e+qG9S5jnSypdvqc+lt5X+CTW3iaqUKe/pU0ec8dwtdnmLRI+JWQF442HIOoG80lSmFpamGvngpf03db9f3rsyRwQIDqBIKXH8NlJsmcexmVDew/jEEbRlQ2qvY1ES3+CsNYzq2uCqsXIRav+53AdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('mJVdT06AVuzPFS9OuAXCO0t+P8gVzhwzQWQ9NRl58/1AACTF+vgvD4WlBQpf2p9rnVNQf3css9V5Vq0Sii3MoW4X6D/bNOv11OgrZufaYqtwVo19WfL9jY0Touyf7Cy81jQYx2g1fcpiwHp+WdIQfgdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
-handler = WebhookHandler('985bb917ecc2df949a56fc0807fa9f96')
+handler = WebhookHandler('05ad8a229e9b04803a8ae69a55950a14')
 #===========[ NOTE SAVER ]=======================
 notes = {}
 
 # Post Request
-@app.route("/call", methods=['POST'])
+@app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
